@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flare_blink_bug">
+    package="com.example.flutter_40523">
    <application
-        android:label="flare_blink_bug"
+        android:label="flutter_40523"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

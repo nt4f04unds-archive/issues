@@ -1,4 +1,4 @@
-package com.example.flare_blink_bug
+package com.example.flutter_40523
 
 import android.app.Activity
 import android.os.Bundle
