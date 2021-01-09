@@ -1,2 +1,2 @@
-issue <!-- todo: link -->
-<!-- todo: change 'flutter_issue' to something else  -->
+issue https://github.com/google/flutter.widgets/issues/218
+the ItemScrollController can be attached only to a signle ScrollablePositionedList
