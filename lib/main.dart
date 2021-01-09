@@ -6,54 +6,34 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  final ItemScrollController controller = ItemScrollController();
+  final List<int> items = List<int>.generate(100, (index) => index);
+  Widget _buildListView(BuildContext context) {
+    return ScrollablePositionedList.builder(
+      itemScrollController: controller,
+      itemCount: items.length,
+      itemBuilder: (context, index) => Text(index.toString()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'App',
       home: Builder(
         builder: (context) => Scaffold(
-          body: Center(
-            child: MaterialButton(
-              child: Text('open delegate'),
-              onPressed: () {
-                showSearch(context: context, delegate: MySearchDelegate());
-              },
+          body: DefaultTabController(
+            initialIndex: 0,
+            length: 2,
+            child: TabBarView(
+              children: [
+                _buildListView(context),
+                _buildListView(context),
+              ],
             ),
           ),
         ),
       ),
-    );
-  }
-}
-
-class MySearchDelegate extends SearchDelegate {
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    return [];
-  }
-
-  @override
-  Widget buildLeading(BuildContext context) {
-    return BackButton();
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-    return _buildSuggestionsAndResults(context);
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    return _buildSuggestionsAndResults(context);
-  }
-
-  final ItemScrollController controller = ItemScrollController();
-  List<int> items = List<int>.generate(100, (index) => index);
-  Widget _buildSuggestionsAndResults(BuildContext context) {
-    return ScrollablePositionedList.builder(
-      itemScrollController: controller,
-      itemCount: items.length,
-      itemBuilder: (context, index) => Text(index.toString()),
     );
   }
 }
