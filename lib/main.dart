@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(App());
+  SystemChrome.setPreferredOrientations(const [
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight,
+  ]);
 }
 
 class App extends StatelessWidget {
@@ -10,7 +15,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'App',
       home: Scaffold(
-        body: Container(),
+        body: const Center(
+          child: Icon(Icons.arrow_upward),
+        ),
       ),
     );
   }
