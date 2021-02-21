@@ -29,9 +29,6 @@ enum class GeneralChannel {
             channel!!.setMethodCallHandler { call: MethodCall, result: MethodChannel.Result -> onMethodCall(call, result) }
         }
     }
-    open fun kill() {
-        channel = null
-    }
     private var channel: MethodChannel? = null
     open fun send() {
         channel!!.invokeMethod("test", ArrayList<String>())

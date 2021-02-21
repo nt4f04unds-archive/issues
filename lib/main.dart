@@ -7,26 +7,26 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   channel = const MethodChannel('channel');
   channel.setMethodCallHandler((MethodCall call) async {
-    if (call.method == "test") {
+    if (call.method == 'test') {
 
-      // Outputs type `List<dynamic>`
-      debugPrint(call.arguments.runtimeType.toString());
+      // outputs `List<Object?>` (or `List<dynamic>` dependent on flutter version)
+      print(call.arguments.runtimeType);
 
-      // This fails without ANY ERROR
-      List<String> testVar = call.arguments as List<String>;
+      // this invalid cast fails without any error
+      List<String> variable = call.arguments as List<String>;
 
-      // This call will also fail code
-      // _getSongsFromChannel(call.arguments);
+      void function(List<String> value) { }
+      // this call will also fail code
+      // function(call.arguments);
 
-      // And any further instructions in this closure won't be executed
-      debugPrint('wfqfwqfq');
+      // and any further instructions in this closure won't be executed
+      print('print');
     }
   });
   runApp(TestApp());
 }
 
 class TestApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
