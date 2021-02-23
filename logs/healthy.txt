@@ -1,0 +1,288 @@
+PS C:\dev\projects\issues> flutter run -v
+[  +62 ms] executing: [c:\dev\src\flutter/] git -c log.showSignature=false log -n 1 --pretty=format:%H
+[  +55 ms] Exit code 0 from: git -c log.showSignature=false log -n 1 --pretty=format:%H
+[        ] 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[        ] executing: [c:\dev\src\flutter/] git tag --points-at 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[  +40 ms] Exit code 0 from: git tag --points-at 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[   +1 ms] executing: [c:\dev\src\flutter/] git describe --match *.*.* --long --tags 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[  +51 ms] Exit code 0 from: git describe --match *.*.* --long --tags 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[        ] 1.27.0-1.0.pre-100-g76080cd46c
+[  +31 ms] executing: [c:\dev\src\flutter/] git rev-parse --abbrev-ref --symbolic @{u}
+[  +29 ms] Exit code 0 from: git rev-parse --abbrev-ref --symbolic @{u}
+[        ] origin/texture_buildable
+[        ] executing: [c:\dev\src\flutter/] git ls-remote --get-url origin
+[  +27 ms] Exit code 0 from: git ls-remote --get-url origin
+[        ] git@github.com:nt4f04und/flutter.git
+[  +13 ms] executing: [c:\dev\src\flutter/] git rev-parse --abbrev-ref HEAD
+[  +28 ms] Exit code 0 from: git rev-parse --abbrev-ref HEAD
+[        ] texture_buildable
+[  +29 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +42 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe devices -l
+[  +47 ms] List of devices attached
+           40c9f14                device product:whyred model:Redmi_Note_5 device:whyred transport_id:1
+[   +5 ms] C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell getprop
+[ +109 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +68 ms] Skipping pub get: version match.
+[  +81 ms] Generating C:\dev\projects\issues\android\app\src\main\java\io\flutter\plugins\GeneratedPluginRegistrant.java
+[  +25 ms] ro.hardware = qcom
+[  +29 ms] Initializing file store
+[   +7 ms] Skipping target: gen_localizations
+[   +5 ms] complete
+[   +3 ms] Launching lib\main.dart on Redmi Note 5 in debug mode...
+[   +3 ms] c:\dev\src\flutter\bin\cache\dart-sdk\bin\dart.exe --disable-dart-dev c:\dev\src\flutter\bin\cache\artifacts\engine\windows-x64\frontend_server.dart.snapshot --sdk-root c:\dev\src\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/
+--incremental --target=flutter --debugger-module-names --experimental-emit-debug-metadata -DFLUTTER_WEB_AUTO_DETECT=true --output-dill C:\Users\danya\AppData\Local\Temp\flutter_tools.a2a251b4\flutter_tool.f6edafe7\app.dill --packages
+C:\dev\projects\issues\.dart_tool\package_config.json -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation --filesystem-scheme org-dartlang-root --initialize-from-dill
+build\f245b0b7cc30f460f818fcec6bcf01fb.cache.dill.track.dill --flutter-widget-cache --enable-experiment=alternative-invalidation-strategy
+[  +13 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell -x logcat -v time -t 1
+[  +66 ms] <- compile package:flutter_issue/main.dart
+[ +203 ms] --------- beginning of main
+                    02-24 02:40:56.721 D/BoundBrokerSvc(13372): onUnbind: Intent { act=com.google.android.gms.safetynet.service.START pkg=com.google.android.gms }
+[  +25 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe version
+[  +32 ms] Android Debug Bridge version 1.0.41
+           Version 30.0.4-6686687
+           Installed as C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe
+[   +2 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe start-server
+[  +31 ms] Building APK
+[  +13 ms] Running Gradle task 'assembleDebug'...
+[   +3 ms] Using gradle from C:\dev\projects\issues\android\gradlew.bat.
+[        ] C:\dev\projects\issues\android\gradlew.bat mode: 33279 rwxrwxrwx.
+[   +8 ms] executing: C:\Program Files\Android\Android Studio\jre\bin\java -version
+[  +62 ms] Exit code 0 from: C:\Program Files\Android\Android Studio\jre\bin\java -version
+[        ] openjdk version "1.8.0_242-release"
+           OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+           OpenJDK 64-Bit Server VM (build 25.242-b01, mixed mode)
+[   +2 ms] executing: [C:\dev\projects\issues\android/] C:\dev\projects\issues\android\gradlew.bat -Pverbose=true -Ptarget-platform=android-arm64 -Ptarget=C:\dev\projects\issues\lib\main.dart -Pdart-defines=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==
+-Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug
+[+4781 ms] Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+[+9491 ms] > Task :app:compileFlutterBuildDebug
+[        ] [  +57 ms] executing: [c:\dev\src\flutter/] git -c log.showSignature=false log -n 1 --pretty=format:%H
+[        ] [  +71 ms] Exit code 0 from: git -c log.showSignature=false log -n 1 --pretty=format:%H
+[        ] [        ] 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[        ] [        ] executing: [c:\dev\src\flutter/] git tag --points-at 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[        ] [  +85 ms] Exit code 0 from: git tag --points-at 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[        ] [   +1 ms] executing: [c:\dev\src\flutter/] git describe --match *.*.* --long --tags 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[        ] [  +56 ms] Exit code 0 from: git describe --match *.*.* --long --tags 76080cd46c1f88a9bd33868dd46f112fde75c4db
+[        ] [        ] 1.27.0-1.0.pre-100-g76080cd46c
+[        ] [  +31 ms] executing: [c:\dev\src\flutter/] git rev-parse --abbrev-ref --symbolic @{u}
+[        ] [  +32 ms] Exit code 0 from: git rev-parse --abbrev-ref --symbolic @{u}
+[        ] [        ] origin/texture_buildable
+[        ] [        ] executing: [c:\dev\src\flutter/] git ls-remote --get-url origin
+[        ] [  +29 ms] Exit code 0 from: git ls-remote --get-url origin
+[        ] [        ] git@github.com:nt4f04und/flutter.git
+[        ] [  +13 ms] executing: [c:\dev\src\flutter/] git rev-parse --abbrev-ref HEAD
+[        ] [  +28 ms] Exit code 0 from: git rev-parse --abbrev-ref HEAD
+[        ] [        ] texture_buildable
+[        ] [  +28 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [  +38 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[        ] [  +47 ms] Initializing file store
+[        ] [  +11 ms] Skipping target: gen_localizations
+[        ] [   +5 ms] kernel_snapshot: Starting due to {}
+[        ] [  +12 ms] c:\dev\src\flutter\bin\cache\dart-sdk\bin\dart.exe --disable-dart-dev c:\dev\src\flutter\bin\cache\artifacts\engine\windows-x64\frontend_server.dart.snapshot --sdk-root
+c:\dev\src\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/ --target=flutter --no-print-incremental-dependencies -DFLUTTER_WEB_AUTO_DETECT=true -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation
+--no-link-platform --packages C:\dev\projects\issues\.dart_tool\package_config.json --output-dill C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a\app.dill --depfile
+C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a\kernel_snapshot.d package:flutter_issue/main.dart
+[+5482 ms] [+6176 ms] kernel_snapshot: Complete
+[ +503 ms] [ +473 ms] debug_android_application: Starting due to {}
+[ +302 ms] [ +272 ms] debug_android_application: Complete
+[ +397 ms] [ +382 ms] Persisting file store
+[        ] [  +12 ms] Done persisting file store
+[        ] [   +9 ms] build succeeded.
+[        ] [  +14 ms] "flutter assemble" took 7 464ms.
+[        ] [   +2 ms] ensureAnalyticsSent: 0ms
+[        ] [   +1 ms] Running shutdown hooks
+[        ] [        ] Shutdown hooks complete
+[        ] [        ] exiting with code 0
+[ +203 ms] > Task :app:packLibsflutterBuildDebug
+[   +1 ms] > Task :app:preBuild UP-TO-DATE
+[        ] > Task :app:preDebugBuild UP-TO-DATE
+[        ] > Task :app:compileDebugAidl NO-SOURCE
+[        ] > Task :app:checkDebugManifest
+[        ] > Task :app:compileDebugRenderscript NO-SOURCE
+[  +91 ms] > Task :app:generateDebugBuildConfig
+[        ] > Task :app:cleanMergeDebugAssets UP-TO-DATE
+[        ] > Task :app:mergeDebugShaders
+[        ] > Task :app:compileDebugShaders
+[        ] > Task :app:generateDebugAssets
+[        ] > Task :app:mergeDebugAssets
+[ +299 ms] > Task :app:copyFlutterAssetsDebug
+[        ] > Task :app:mainApkListPersistenceDebug
+[        ] > Task :app:generateDebugResValues
+[        ] > Task :app:generateDebugResources
+[ +390 ms] > Task :app:createDebugCompatibleScreenManifests
+[ +106 ms] > Task :app:processDebugManifest
+[        ] > Task :app:processDebugJavaRes NO-SOURCE
+[ +198 ms] > Task :app:checkDebugDuplicateClasses
+[ +406 ms] > Task :app:validateSigningDebug
+[        ] > Task :app:signingConfigWriterDebug
+[        ] > Task :app:mergeDebugJniLibFolders
+[  +93 ms] > Task :app:desugarDebugFileDependencies
+[ +792 ms] > Task :app:mergeExtDexDebug
+[+1301 ms] > Task :app:mergeDebugNativeLibs
+[        ] Unable to strip library 'C:\dev\projects\issues\build\app\intermediates\merged_native_libs\debug\out\lib\arm64-v8a\libflutter.so' due to missing strip tool for ABI 'ARM64_V8A'. Packaging it as is.
+[  +97 ms] Unable to strip library 'C:\dev\projects\issues\build\app\intermediates\merged_native_libs\debug\out\lib\x86\libflutter.so' due to missing strip tool for ABI 'X86'. Packaging it as is.
+[        ] Unable to strip library 'C:\dev\projects\issues\build\app\intermediates\merged_native_libs\debug\out\lib\x86_64\libflutter.so' due to missing strip tool for ABI 'X86_64'. Packaging it as is.
+[ +199 ms] > Task :app:stripDebugDebugSymbols
+[        ] Compatible side by side NDK version was not found.
+[ +102 ms] > Task :app:mergeDebugResources
+[ +400 ms] > Task :app:processDebugResources
+[+9696 ms] > Task :app:compileDebugKotlin
+[        ] > Task :app:javaPreCompileDebug
+[+1000 ms] > Task :app:compileDebugJavaWithJavac
+[        ] > Task :app:compileDebugSources
+[ +401 ms] > Task :app:transformClassesWithDexBuilderForDebug
+[ +299 ms] > Task :app:mergeDebugJavaResource
+[ +201 ms] > Task :app:mergeDexDebug
+[+4298 ms] > Task :app:packageDebug
+[ +301 ms] > Task :app:assembleDebug
+[ +197 ms] BUILD SUCCESSFUL in 41s
+[        ] 31 actionable tasks: 30 executed, 1 up-to-date
+[ +393 ms] Running Gradle task 'assembleDebug'... (completed in 42,5s)
+[  +54 ms] calculateSha: LocalDirectory: 'C:\dev\projects\issues\build\app\outputs\flutter-apk'/app.apk
+[ +493 ms] ✓ Built build\app\outputs\flutter-apk\app-debug.apk.
+[   +3 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\build-tools\30.0.2\aapt dump xmltree C:\dev\projects\issues\build\app\outputs\flutter-apk\app.apk AndroidManifest.xml
+[  +24 ms] Exit code 0 from: C:\Users\danya\AppData\Local\Android\sdk\build-tools\30.0.2\aapt dump xmltree C:\dev\projects\issues\build\app\outputs\flutter-apk\app.apk AndroidManifest.xml
+[        ] N: android=http://schemas.android.com/apk/res/android
+             E: manifest (line=2)
+               A: android:versionCode(0x0101021b)=(type 0x10)0x1
+               A: android:versionName(0x0101021c)="1.0.0" (Raw: "1.0.0")
+               A: android:compileSdkVersion(0x01010572)=(type 0x10)0x1d
+               A: android:compileSdkVersionCodename(0x01010573)="10" (Raw: "10")
+               A: package="com.example.flutter_issue" (Raw: "com.example.flutter_issue")
+               A: platformBuildVersionCode=(type 0x10)0x1d
+               A: platformBuildVersionName=(type 0x10)0xa
+               E: uses-sdk (line=7)
+                 A: android:minSdkVersion(0x0101020c)=(type 0x10)0x10
+                 A: android:targetSdkVersion(0x01010270)=(type 0x10)0x1d
+               E: uses-permission (line=14)
+                 A: android:name(0x01010003)="android.permission.INTERNET" (Raw: "android.permission.INTERNET")
+               E: application (line=16)
+                 A: android:label(0x01010001)="flutter_issue" (Raw: "flutter_issue")
+                 A: android:icon(0x01010002)=@0x7f080000
+                 A: android:debuggable(0x0101000f)=(type 0x12)0xffffffff
+                 A: android:appComponentFactory(0x0101057a)="androidx.core.app.CoreComponentFactory" (Raw: "androidx.core.app.CoreComponentFactory")
+                 E: activity (line=21)
+                   A: android:theme(0x01010000)=@0x7f0a0000
+                   A: android:name(0x01010003)="com.example.flutter_issue.MainActivity" (Raw: "com.example.flutter_issue.MainActivity")
+                   A: android:launchMode(0x0101001d)=(type 0x10)0x1
+                   A: android:configChanges(0x0101001f)=(type 0x11)0x40003fb4
+                   A: android:windowSoftInputMode(0x0101022b)=(type 0x11)0x10
+                   A: android:hardwareAccelerated(0x010102d3)=(type 0x12)0xffffffff
+                   E: meta-data (line=35)
+                     A: android:name(0x01010003)="io.flutter.embedding.android.NormalTheme" (Raw: "io.flutter.embedding.android.NormalTheme")
+                     A: android:resource(0x01010025)=@0x7f0a0001
+                   E: meta-data (line=45)
+                     A: android:name(0x01010003)="io.flutter.embedding.android.SplashScreenDrawable" (Raw: "io.flutter.embedding.android.SplashScreenDrawable")
+                     A: android:resource(0x01010025)=@0x7f040000
+                   E: intent-filter (line=49)
+                     E: action (line=50)
+                       A: android:name(0x01010003)="android.intent.action.MAIN" (Raw: "android.intent.action.MAIN")
+                     E: category (line=52)
+                       A: android:name(0x01010003)="android.intent.category.LAUNCHER" (Raw: "android.intent.category.LAUNCHER")
+                 E: meta-data (line=59)
+                   A: android:name(0x01010003)="flutterEmbedding" (Raw: "flutterEmbedding")
+                   A: android:value(0x01010024)=(type 0x10)0x2
+[   +4 ms] Stopping app 'app.apk' on Redmi Note 5.
+[        ] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell am force-stop com.example.flutter_issue
+[ +168 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell pm list packages com.example.flutter_issue
+[ +146 ms] package:com.example.flutter_issue
+[   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell cat /data/local/tmp/sky.com.example.flutter_issue.sha1
+[  +71 ms] 1526daf26c81c8689c37acfc5886f0e31cd1c372
+[        ] Installing APK.
+[   +1 ms] Installing build\app\outputs\flutter-apk\app.apk...
+[        ] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 install -t -r C:\dev\projects\issues\build\app\outputs\flutter-apk\app.apk
+[+12032 ms] Performing Streamed Install
+                     Success
+[        ] Installing build\app\outputs\flutter-apk\app.apk... (completed in 12,0s)
+[   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell echo -n bd9afdc7f7bd18d50c8c4e0d2b03529cc3e3506c > /data/local/tmp/sky.com.example.flutter_issue.sha1
+[  +64 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell -x logcat -v time -t 1
+[ +365 ms] --------- beginning of main
+                    02-24 02:41:52.961 I/CloudSettingsProvider(31896): uriMatch : 2
+[  +20 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell am start -a android.intent.action.RUN -f 0x20000000 --ez enable-background-compilation true --ez enable-dart-profiling true --ez enable-checked-mode true
+--ez verify-entry-points true com.example.flutter_issue/com.example.flutter_issue.MainActivity
+[+1759 ms] Starting: Intent { act=android.intent.action.RUN flg=0x20000000 cmp=com.example.flutter_issue/.MainActivity (has extras) }
+[        ] Waiting for observatory port to be available...
+[+2550 ms] Observatory URL on device: http://127.0.0.1:37766/fO-QONFeP70=/
+[   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 forward tcp:0 tcp:37766
+[  +48 ms] 56484
+[        ] Forwarded host port 56484 to device port 37766 for Observatory
+[   +4 ms] Caching compiled dill
+[  +26 ms] Connecting to service protocol: http://127.0.0.1:56484/fO-QONFeP70=/
+[ +543 ms] Launching a Dart Developer Service (DDS) instance at http://127.0.0.1:0, connecting to VM service at http://127.0.0.1:56484/fO-QONFeP70=/.
+[ +182 ms] DDS is listening at http://127.0.0.1:56489/t_eeftsqKWE=/.
+[  +62 ms] Successfully connected to service protocol: http://127.0.0.1:56484/fO-QONFeP70=/
+[  +33 ms] DevFS: Creating new filesystem on the device (null)
+[ +205 ms] DevFS: Created new filesystem on the device (file:///data/user/0/com.example.flutter_issue/code_cache/issuesDTSGPZ/issues/)
+[   +1 ms] Updating assets
+[  +53 ms] Syncing files to device Redmi Note 5...
+[   +1 ms] <- reset
+[        ] Compiling dart to kernel with 0 updated files
+[   +1 ms] <- recompile package:flutter_issue/main.dart db7f2bb5-7524-437c-b8c3-bf69446ae5f8
+[        ] <- db7f2bb5-7524-437c-b8c3-bf69446ae5f8
+[  +95 ms] Updating files.
+[        ] DevFS: Sync finished
+[   +1 ms] Syncing files to device Redmi Note 5... (completed in 99ms)
+[        ] Synced 0.0MB.
+[        ] <- accept
+[ +122 ms] I/OpenGLRenderer( 7528): Davey! duration=963ms; Flags=1, IntendedVsync=170778910662029, Vsync=170779327328679, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=170779340653699, AnimationStart=170779340823856,
+PerformTraversalsStart=170779340844272, DrawStart=170779373068283, SyncQueued=170779378956460, SyncStart=170779379129845, IssueDrawCommandsStart=170779379663543, SwapBuffers=170779870560522, FrameCompleted=170779874239324, DequeueBufferDuration=6945000,
+QueueBufferDuration=638000,
+[ +102 ms] Connected to _flutterView/0x76451c3820.
+[   +2 ms] Flutter run key commands.
+[   +1 ms] r Hot reload. 🔥🔥🔥
+[        ] R Hot restart.
+[        ] h Repeat this help message.
+[        ] d Detach (terminate "flutter run" but leave application running).
+[        ] c Clear the screen
+[        ] q Quit (terminate the application on the device).
+[        ] Running with unsound null safety
+[        ] For more information see https://dart.dev/null-safety/unsound-null-safety
+[        ] An Observatory debugger and profiler on Redmi Note 5 is available at: http://127.0.0.1:56489/t_eeftsqKWE=/
+[ +425 ms] The Flutter DevTools debugger and profiler on Redmi Note 5 is available at: http://127.0.0.1:9102?uri=http%3A%2F%2F127.0.0.1%3A56489%2Ft_eeftsqKWE%3D%2F
+[+4431 ms] I/e.flutter_issu( 7528): ProcessProfilingInfo new_methods=594 is saved saved_to_disk=1 resolve_classes_delay=8000
