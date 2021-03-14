@@ -1,4 +1,4 @@
-name: flutter_issue
+name: flutter_issue72508
 description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
@@ -7,6 +7,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  video_player: ^2.0.0-nullsafety.3
   flutter:
     sdk: flutter
 
@@ -18,3 +19,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+   - assets/
