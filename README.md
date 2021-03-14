@@ -1,9 +1,7 @@
-issue https://github.com/flutter/flutter/issues/72878
+issue https://github.com/flutter/flutter/issues/78169
 
-video has like 100ms looping hiccup on iOS, that's not the case on Android
-
-to clone use
+memory usage increased in latest video_player versions
 
 ```
-git clone -b flutter_72878 --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b flutter_78169 --single-branch git@github.com:nt4f04unds-archive/issues.git
 ```
