@@ -502,9 +502,9 @@ danya@Mac-danya issues % flutter run -v
 (FLUTTER_BUILD_NUMBER)","UILaunchStoryboardName":"LaunchScreen","CFBundleExecutable":"$(EXECUTABLE_NAME)","LSRequiresIPhoneOS":true,"UISupportedInterfaceOrientations":["UIInterfaceOrientationPor
 trait","UIInterfaceOrientationLandscapeLeft","UIInterfaceOrientationLandscapeRight"],"UIViewControllerBasedStatusBarAppearance":false,"CFBundleSignature":"????","CFBundlePackageType":"APPL","CFB
 undleDevelopmentRegion":"$(DEVELOPMENT_LANGUAGE)","UISupportedInterfaceOrientations~ipad":["UIInterfaceOrientationPortrait","UIInterfaceOrientationPortraitUpsideDown","UIInterfaceOrientationLand
-scapeLeft","UIInterfaceOrientationLandscapeRight"],"CFBundleName":"flutter_issue"}
+scapeLeft","UIInterfaceOrientationLandscapeRight"],"CFBundleName":"flutter_76640"}
 [   +5 ms] executing: [/Users/danya/dev/projects/issues/ios/] xcrun xcodebuild -list
-[   +9 ms] <- compile package:flutter_issue/main.dart
+[   +9 ms] <- compile package:flutter_76640/main.dart
 [+2196 ms] Command line invocation:
                         /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -list
 
@@ -840,7 +840,7 @@ scapeLeft","UIInterfaceOrientationLandscapeRight"],"CFBundleName":"flutter_issue
                         PRECOMP_DESTINATION_DIR = /Users/danya/dev/projects/issues/build/ios/Runner.build/Release-iphoneos/Runner.build/PrefixHeaders
                         PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO
                         PRIVATE_HEADERS_FOLDER_PATH = Runner.app/PrivateHeaders
-                        PRODUCT_BUNDLE_IDENTIFIER = com.example.flutter_issue
+                        PRODUCT_BUNDLE_IDENTIFIER = com.example.flutter_76640
                         PRODUCT_BUNDLE_PACKAGE_TYPE = APPL
                         PRODUCT_MODULE_NAME = Runner
                         PRODUCT_NAME = Runner
@@ -991,7 +991,7 @@ NOT(eventMessage BEGINSWITH "assertion failed: ") AND NOT(eventMessage CONTAINS 
 D_NUMBER)","UILaunchStoryboardName":"LaunchScreen","CFBundleExecutable":"$(EXECUTABLE_NAME)","LSRequiresIPhoneOS":true,"UISupportedInterfaceOrientations":["UIInterfaceOrientationPortrait","UIInterfaceOrienta
 tionLandscapeLeft","UIInterfaceOrientationLandscapeRight"],"UIViewControllerBasedStatusBarAppearance":false,"CFBundleSignature":"????","CFBundlePackageType":"APPL","CFBundleDevelopmentRegion":"$(DEVELOPMENT_
 LANGUAGE)","UISupportedInterfaceOrientations~ipad":["UIInterfaceOrientationPortrait","UIInterfaceOrientationPortraitUpsideDown","UIInterfaceOrientationLandscapeLeft","UIInterfaceOrientationLandscapeRight"],"
-CFBundleName":"flutter_issue"}
+CFBundleName":"flutter_76640"}
 [   +7 ms] executing: mkfifo /var/folders/y9/k73ycwss2qb143lrcd8k24440000gn/T/flutter_tools.RnFJcs/flutter_build_log_pipe.X4AiM1/pipe_to_stdout
 [  +11 ms] Exit code 0 from: mkfifo /var/folders/y9/k73ycwss2qb143lrcd8k24440000gn/T/flutter_tools.RnFJcs/flutter_build_log_pipe.X4AiM1/pipe_to_stdout
 [   +8 ms] Running Xcode build...
@@ -1044,9 +1044,9 @@ SCRIPT_OUTPUT_STREAM_FILE=/var/folders/y9/k73ycwss2qb143lrcd8k24440000gn/T/flutt
                     Entitlements:
 
                     {
-                        "application-identifier" = "5J47G375VA.com.example.flutter_issue";
+                        "application-identifier" = "5J47G375VA.com.example.flutter_76640";
                         "keychain-access-groups" =     (
-                            "5J47G375VA.com.example.flutter_issue"
+                            "5J47G375VA.com.example.flutter_76640"
                         );
                     }
 
@@ -1418,7 +1418,7 @@ SCRIPT_OUTPUT_STREAM_FILE=/var/folders/y9/k73ycwss2qb143lrcd8k24440000gn/T/flutt
                         d/PrefixHeaders
                         export PRESERVE_DEAD_CODE_INITS_AND_TERMS=NO
                         export PRIVATE_HEADERS_FOLDER_PATH=Runner.app/PrivateHeaders
-                        export PRODUCT_BUNDLE_IDENTIFIER=com.example.flutter_issue
+                        export PRODUCT_BUNDLE_IDENTIFIER=com.example.flutter_76640
                         export PRODUCT_BUNDLE_PACKAGE_TYPE=APPL
                         export PRODUCT_MODULE_NAME=Runner
                         export PRODUCT_NAME=Runner
@@ -2203,7 +2203,7 @@ SCRIPT_OUTPUT_STREAM_FILE=/var/folders/y9/k73ycwss2qb143lrcd8k24440000gn/T/flutt
                         d/PrefixHeaders
                         export PRESERVE_DEAD_CODE_INITS_AND_TERMS=NO
                         export PRIVATE_HEADERS_FOLDER_PATH=Runner.app/PrivateHeaders
-                        export PRODUCT_BUNDLE_IDENTIFIER=com.example.flutter_issue
+                        export PRODUCT_BUNDLE_IDENTIFIER=com.example.flutter_76640
                         export PRODUCT_BUNDLE_PACKAGE_TYPE=APPL
                         export PRODUCT_MODULE_NAME=Runner
                         export PRODUCT_NAME=Runner
@@ -2848,7 +2848,7 @@ SCRIPT_OUTPUT_STREAM_FILE=/var/folders/y9/k73ycwss2qb143lrcd8k24440000gn/T/flutt
                         /Users/danya/Library/Developer/Xcode/DerivedData/Runner-fqxesgzjcjkzbpctqezironfzdkt/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/PrefixHeaders
                         PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO
                         PRIVATE_HEADERS_FOLDER_PATH = Runner.app/PrivateHeaders
-                        PRODUCT_BUNDLE_IDENTIFIER = com.example.flutter_issue
+                        PRODUCT_BUNDLE_IDENTIFIER = com.example.flutter_76640
                         PRODUCT_BUNDLE_PACKAGE_TYPE = APPL
                         PRODUCT_MODULE_NAME = Runner
                         PRODUCT_NAME = Runner
@@ -2992,16 +2992,16 @@ SCRIPT_OUTPUT_STREAM_FILE=/var/folders/y9/k73ycwss2qb143lrcd8k24440000gn/T/flutt
 [+1178 ms] executing: /usr/bin/plutil -convert json -o - /Users/danya/dev/projects/issues/build/ios/iphonesimulator/Runner.app/Info.plist
 [  +17 ms] Exit code 0 from: /usr/bin/plutil -convert json -o - /Users/danya/dev/projects/issues/build/ios/iphonesimulator/Runner.app/Info.plist
 [        ]
-{"CFBundleName":"flutter_issue","DTSDKName":"iphonesimulator13.7","DTXcode":"1170","CFBundleIcons~ipad":{"CFBundlePrimaryIcon":{"CFBundleIconFiles":["AppIcon20x20","AppIcon29x29","AppIcon40x40","AppIcon60x60
+{"CFBundleName":"flutter_76640","DTSDKName":"iphonesimulator13.7","DTXcode":"1170","CFBundleIcons~ipad":{"CFBundlePrimaryIcon":{"CFBundleIconFiles":["AppIcon20x20","AppIcon29x29","AppIcon40x40","AppIcon60x60
 ","AppIcon76x76","AppIcon83.5x83.5"],"CFBundleIconName":"AppIcon"}},"UILaunchStoryboardName":"LaunchScreen","DTSDKBuild":"17H22","CFBundleDevelopmentRegion":"en","CFBundleVersion":"1","BuildMachineOSBuild":"
 19C57","DTPlatformName":"iphonesimulator","CFBundlePackageType":"APPL","CFBundleShortVersionString":"1.0.0","CFBundleSupportedPlatforms":["iPhoneSimulator"],"UIMainStoryboardFile":"Main","CFBundleInfoDiction
 aryVersion":"6.0","CFBundleExecutable":"Runner","DTCompiler":"com.apple.compilers.llvm.clang.1_0","UISupportedInterfaceOrientations~ipad":["UIInterfaceOrientationPortrait","UIInterfaceOrientationPortraitUpsi
-deDown","UIInterfaceOrientationLandscapeLeft","UIInterfaceOrientationLandscapeRight"],"MinimumOSVersion":"9.0","CFBundleIdentifier":"com.example.flutter_issue","UIDeviceFamily":[1,2],"CFBundleSignature":"???
+deDown","UIInterfaceOrientationLandscapeLeft","UIInterfaceOrientationLandscapeRight"],"MinimumOSVersion":"9.0","CFBundleIdentifier":"com.example.flutter_76640","UIDeviceFamily":[1,2],"CFBundleSignature":"???
 ?","DTPlatformVersion":"13.7","CFBundleIcons":{"CFBundlePrimaryIcon":{"CFBundleIconFiles":["AppIcon20x20","AppIcon29x29","AppIcon40x40","AppIcon60x60"],"CFBundleIconName":"AppIcon"}},"DTXcodeBuild":"11E801a"
 ,"LSRequiresIPhoneOS":true,"UISupportedInterfaceOrientations":["UIInterfaceOrientationPortrait","UIInterfaceOrientationLandscapeLeft","UIInterfaceOrientationLandscapeRight"],"UIViewControllerBasedStatusBarAp
 pearance":false,"DTPlatformBuild":"17H22"}
-[   +6 ms] executing: xcrun simctl launch C8B744A0-7C40-4310-A011-C68D242FCD56 com.example.flutter_issue --enable-dart-profiling --enable-checked-mode --verify-entry-points --observatory-port=0
-[ +230 ms] com.example.flutter_issue: 24763
+[   +6 ms] executing: xcrun simctl launch C8B744A0-7C40-4310-A011-C68D242FCD56 com.example.flutter_76640 --enable-dart-profiling --enable-checked-mode --verify-entry-points --observatory-port=0
+[ +230 ms] com.example.flutter_76640: 24763
 [        ] Waiting for observatory port to be available...
 [ +519 ms] Observatory URL on device: http://127.0.0.1:50012/QoZ5I75Oq1o=/
 [   +6 ms] Caching compiled dill
@@ -3016,7 +3016,7 @@ pearance":false,"DTPlatformBuild":"17H22"}
 [  +89 ms] Syncing files to device iPhone SE (2nd generation)...
 [   +2 ms] <- reset
 [        ] Compiling dart to kernel with 0 updated files
-[   +2 ms] <- recompile package:flutter_issue/main.dart 15bc8e29-bec6-410b-bc88-95e6541fc9af
+[   +2 ms] <- recompile package:flutter_76640/main.dart 15bc8e29-bec6-410b-bc88-95e6541fc9af
 [        ] <- 15bc8e29-bec6-410b-bc88-95e6541fc9af
 [  +86 ms] Updating files.
 [        ] DevFS: Sync finished

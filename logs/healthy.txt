@@ -51,7 +51,7 @@ PS C:\dev\projects\issues> flutter run -v
 C:\dev\projects\issues\.dart_tool\package_config.json -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation --filesystem-scheme org-dartlang-root --initialize-from-dill
 build\f245b0b7cc30f460f818fcec6bcf01fb.cache.dill.track.dill --flutter-widget-cache --enable-experiment=alternative-invalidation-strategy
 [  +13 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell -x logcat -v time -t 1
-[  +66 ms] <- compile package:flutter_issue/main.dart
+[  +66 ms] <- compile package:flutter_76640/main.dart
 [ +203 ms] --------- beginning of main
                     02-24 02:40:56.721 D/BoundBrokerSvc(13372): onUnbind: Intent { act=com.google.android.gms.safetynet.service.START pkg=com.google.android.gms }
 [  +25 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe version
@@ -127,7 +127,7 @@ build\f245b0b7cc30f460f818fcec6bcf01fb.cache.dill.track.dill --flutter-widget-ca
 [        ] [  +12 ms] c:\dev\src\flutter\bin\cache\dart-sdk\bin\dart.exe --disable-dart-dev c:\dev\src\flutter\bin\cache\artifacts\engine\windows-x64\frontend_server.dart.snapshot --sdk-root
 c:\dev\src\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/ --target=flutter --no-print-incremental-dependencies -DFLUTTER_WEB_AUTO_DETECT=true -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation
 --no-link-platform --packages C:\dev\projects\issues\.dart_tool\package_config.json --output-dill C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a\app.dill --depfile
-C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a\kernel_snapshot.d package:flutter_issue/main.dart
+C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a\kernel_snapshot.d package:flutter_76640/main.dart
 [+5482 ms] [+6176 ms] kernel_snapshot: Complete
 [ +503 ms] [ +473 ms] debug_android_application: Starting due to {}
 [ +302 ms] [ +272 ms] debug_android_application: Complete
@@ -194,7 +194,7 @@ C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a
                A: android:versionName(0x0101021c)="1.0.0" (Raw: "1.0.0")
                A: android:compileSdkVersion(0x01010572)=(type 0x10)0x1d
                A: android:compileSdkVersionCodename(0x01010573)="10" (Raw: "10")
-               A: package="com.example.flutter_issue" (Raw: "com.example.flutter_issue")
+               A: package="com.example.flutter_76640" (Raw: "com.example.flutter_76640")
                A: platformBuildVersionCode=(type 0x10)0x1d
                A: platformBuildVersionName=(type 0x10)0xa
                E: uses-sdk (line=7)
@@ -203,13 +203,13 @@ C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a
                E: uses-permission (line=14)
                  A: android:name(0x01010003)="android.permission.INTERNET" (Raw: "android.permission.INTERNET")
                E: application (line=16)
-                 A: android:label(0x01010001)="flutter_issue" (Raw: "flutter_issue")
+                 A: android:label(0x01010001)="flutter_76640" (Raw: "flutter_76640")
                  A: android:icon(0x01010002)=@0x7f080000
                  A: android:debuggable(0x0101000f)=(type 0x12)0xffffffff
                  A: android:appComponentFactory(0x0101057a)="androidx.core.app.CoreComponentFactory" (Raw: "androidx.core.app.CoreComponentFactory")
                  E: activity (line=21)
                    A: android:theme(0x01010000)=@0x7f0a0000
-                   A: android:name(0x01010003)="com.example.flutter_issue.MainActivity" (Raw: "com.example.flutter_issue.MainActivity")
+                   A: android:name(0x01010003)="com.example.flutter_76640.MainActivity" (Raw: "com.example.flutter_76640.MainActivity")
                    A: android:launchMode(0x0101001d)=(type 0x10)0x1
                    A: android:configChanges(0x0101001f)=(type 0x11)0x40003fb4
                    A: android:windowSoftInputMode(0x0101022b)=(type 0x11)0x10
@@ -229,10 +229,10 @@ C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a
                    A: android:name(0x01010003)="flutterEmbedding" (Raw: "flutterEmbedding")
                    A: android:value(0x01010024)=(type 0x10)0x2
 [   +4 ms] Stopping app 'app.apk' on Redmi Note 5.
-[        ] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell am force-stop com.example.flutter_issue
-[ +168 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell pm list packages com.example.flutter_issue
-[ +146 ms] package:com.example.flutter_issue
-[   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell cat /data/local/tmp/sky.com.example.flutter_issue.sha1
+[        ] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell am force-stop com.example.flutter_76640
+[ +168 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell pm list packages com.example.flutter_76640
+[ +146 ms] package:com.example.flutter_76640
+[   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell cat /data/local/tmp/sky.com.example.flutter_76640.sha1
 [  +71 ms] 1526daf26c81c8689c37acfc5886f0e31cd1c372
 [        ] Installing APK.
 [   +1 ms] Installing build\app\outputs\flutter-apk\app.apk...
@@ -240,13 +240,13 @@ C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a
 [+12032 ms] Performing Streamed Install
                      Success
 [        ] Installing build\app\outputs\flutter-apk\app.apk... (completed in 12,0s)
-[   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell echo -n bd9afdc7f7bd18d50c8c4e0d2b03529cc3e3506c > /data/local/tmp/sky.com.example.flutter_issue.sha1
+[   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell echo -n bd9afdc7f7bd18d50c8c4e0d2b03529cc3e3506c > /data/local/tmp/sky.com.example.flutter_76640.sha1
 [  +64 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell -x logcat -v time -t 1
 [ +365 ms] --------- beginning of main
                     02-24 02:41:52.961 I/CloudSettingsProvider(31896): uriMatch : 2
 [  +20 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 shell am start -a android.intent.action.RUN -f 0x20000000 --ez enable-background-compilation true --ez enable-dart-profiling true --ez enable-checked-mode true
---ez verify-entry-points true com.example.flutter_issue/com.example.flutter_issue.MainActivity
-[+1759 ms] Starting: Intent { act=android.intent.action.RUN flg=0x20000000 cmp=com.example.flutter_issue/.MainActivity (has extras) }
+--ez verify-entry-points true com.example.flutter_76640/com.example.flutter_76640.MainActivity
+[+1759 ms] Starting: Intent { act=android.intent.action.RUN flg=0x20000000 cmp=com.example.flutter_76640/.MainActivity (has extras) }
 [        ] Waiting for observatory port to be available...
 [+2550 ms] Observatory URL on device: http://127.0.0.1:37766/fO-QONFeP70=/
 [   +1 ms] executing: C:\Users\danya\AppData\Local\Android\sdk\platform-tools\adb.exe -s 40c9f14 forward tcp:0 tcp:37766
@@ -258,12 +258,12 @@ C:\dev\projects\issues\.dart_tool\flutter_build\dca8f035b3ac7d2b2120ebf5a8c86e7a
 [ +182 ms] DDS is listening at http://127.0.0.1:56489/t_eeftsqKWE=/.
 [  +62 ms] Successfully connected to service protocol: http://127.0.0.1:56484/fO-QONFeP70=/
 [  +33 ms] DevFS: Creating new filesystem on the device (null)
-[ +205 ms] DevFS: Created new filesystem on the device (file:///data/user/0/com.example.flutter_issue/code_cache/issuesDTSGPZ/issues/)
+[ +205 ms] DevFS: Created new filesystem on the device (file:///data/user/0/com.example.flutter_76640/code_cache/issuesDTSGPZ/issues/)
 [   +1 ms] Updating assets
 [  +53 ms] Syncing files to device Redmi Note 5...
 [   +1 ms] <- reset
 [        ] Compiling dart to kernel with 0 updated files
-[   +1 ms] <- recompile package:flutter_issue/main.dart db7f2bb5-7524-437c-b8c3-bf69446ae5f8
+[   +1 ms] <- recompile package:flutter_76640/main.dart db7f2bb5-7524-437c-b8c3-bf69446ae5f8
 [        ] <- db7f2bb5-7524-437c-b8c3-bf69446ae5f8
 [  +95 ms] Updating files.
 [        ] DevFS: Sync finished
