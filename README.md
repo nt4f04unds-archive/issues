@@ -1,12 +1,11 @@
-issue <!-- todo: link -->
+issue https://github.com/flutter/flutter/issues/72508
 
-<!-- todo: 
-* change 'flutter_issue' to appropriate branch name
-* and add some breif description gere
--->
+the bug is:
+* **assets/video60_broken** gives black bars from the right and the bottom of the screen
+* all the other videos were re-exported from the adobe premiere and work fine (even 60 fps version)
 
 to clone use
 
 ```
-git clone -b flutter_issue --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b flutter_72508 --single-branch git@github.com:nt4f04unds-archive/issues.git
 ```
