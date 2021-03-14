@@ -7,14 +7,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  # video_player: ^2.0.2
-  video_player:
-    git:
-      url: https://github.com/flutter/plugins
-      path: packages/video_player/video_player
-      ref: faa26ec364cd6d3c738d73526ea55a95b7f4ab1a
-  # video_player:
-  #   path: /Users/danya/dev/projects/plugins/packages/video_player/video_player
+  video_player: 2.0.0-nullsafety.7
+  # video_player: 2.0.2 # if you use latest version memory usage increases
   flutter:
     sdk: flutter
 
