@@ -1,0 +1,7 @@
+*
+
+!.gitignore
+!android/
+!flutter/
+!LICENSE
+!README.md
