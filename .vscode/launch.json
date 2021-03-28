@@ -5,32 +5,61 @@
    "version": "0.2.0",
    "configurations": [
       {
-         "name": "Flutter Profile",
+         "name": "dev",
+         "type": "dart",
+         "request": "launch",
+         "program": "lib/main.dart"
+      },
+      {
+         "name": "dev (web html renderer)",
          "type": "dart",
          "request": "launch",
          "program": "lib/main.dart",
-         "flutterMode": "profile"
+         "args": [
+            "--web-renderer", "html"
+         ]
       },
       {
-         "name": "Flutter Release",
+         "name": "dev (fast-start)",
+         "type": "dart",
+         "request": "launch",
+         "program": "lib/main.dart",
+         "args": [
+            "--fast-start"
+         ]
+      },
+      {
+         "name": "release",
          "type": "dart",
          "request": "launch",
          "program": "lib/main.dart",
          "flutterMode": "release"
       },
       {
-         "name": "Flutter Dev",
-         "type": "dart",
-         "request": "launch",
-         "program": "lib/main.dart"
-      },
-      {
-         "name": "Flutter Dev (fast-start)",
+         "name": "release (web html renderer)",
          "type": "dart",
          "request": "launch",
          "program": "lib/main.dart",
+         "flutterMode": "release",
          "args": [
-            "--fast-start"
+            "--web-renderer", "html"
+         ]
+      },
+      {
+         "name": "profile",
+         "type": "dart",
+         "request": "launch",
+         "program": "lib/main.dart",
+         "flutterMode": "profile"
+      },
+      {
+         "name": "profile (web html renderer)",
+         "type": "dart",
+         "request": "launch",
+         "program": "lib/main.dart",
+         "flutterMode": "profile",
+         "args": [
+            "--web-renderer", "html"
          ]
       },
    ]
