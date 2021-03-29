@@ -7,12 +7,16 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  video_player: 2.0.0-nullsafety.10
-  # video_player: # if you use this version memory usage increases
+  video_player: # last version that doesn't have the issue, 2.0.0-nullsafety.11
+    git:
+      url: https://github.com/flutter/plugins
+      path: packages/video_player/video_player
+      ref: fa95cde0781289ef6918ecc287bfa63d4736bf1f
+  # video_player: # if you use this version memory usage increases, 2.0.0
   #   git:
   #     url: https://github.com/flutter/plugins
   #     path: packages/video_player/video_player
-  #     ref: fa95cde0781289ef6918ecc287bfa63d4736bf1f
+  #     ref: 22007382fa7b95354b41f4ee68ab1e89e665ff4e
   flutter:
     sdk: flutter
 

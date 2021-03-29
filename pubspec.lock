@@ -164,10 +164,12 @@ packages:
   video_player:
     dependency: "direct main"
     description:
-      name: video_player
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0-nullsafety.10"
+      path: "packages/video_player/video_player"
+      ref: fa95cde0781289ef6918ecc287bfa63d4736bf1f
+      resolved-ref: fa95cde0781289ef6918ecc287bfa63d4736bf1f
+      url: "https://github.com/flutter/plugins"
+    source: git
+    version: "2.0.0-nullsafety.11"
   video_player_platform_interface:
     dependency: transitive
     description:
