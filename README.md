@@ -1,12 +1,12 @@
-issue <!-- todo: link -->
+issue https://github.com/ryanheise/audio_service/issues/<!-- todo: link -->
 
 <!-- todo: 
-* change 'flutter_issue' to appropriate branch name
-* and add some breif description gere
+* change 'audio_service_issue' to appropriate branch name
+* and add a brief description of the issue here
 -->
 
 to clone use
 
 ```
-git clone -b flutter_issue --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b audio_service_issue --single-branch git@github.com:nt4f04unds-archive/issues.git
 ```

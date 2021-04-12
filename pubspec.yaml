@@ -1,12 +1,18 @@
-name: flutter_issue
+name: audio_service_issue
 description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  just_audio: 0.7.3
+  audio_service:
+    git:
+      url: https://github.com/ryanheise/audio_service.git
+      ref: 1591871aa7fe440f9c6cf1fd3bb84c6af0880aef # one-isolate
+      path: audio_service
   flutter:
     sdk: flutter
 
