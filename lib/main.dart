@@ -48,8 +48,7 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
   int index = 0;
 
   Future<void> _prepare() async {
-    // TODO: something
-    // _player.setAsset('');
+    _player.setAsset('assets/broken_file.mp3');
   }
 
   Future<void> _init() async {
