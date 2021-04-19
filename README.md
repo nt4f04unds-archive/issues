@@ -1,12 +1,9 @@
-issue https://github.com/ryanheise/audio_service/issues/<!-- todo: link -->
+issue https://github.com/ryanheise/audio_service/issues/671
 
-<!-- todo: 
-* change 'audio_service_issue' to appropriate branch name
-* and add a brief description of the issue here
--->
+quick_actions plugin not working with one-isolate
 
 to clone use
 
 ```
-git clone -b audio_service_issue --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b audio_service_671 --single-branch git@github.com:nt4f04unds-archive/issues.git
 ```
