@@ -1,4 +1,4 @@
-name: flutter_issue
+name: flutter_80704
 description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
@@ -7,6 +7,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  firebase_core: ^1.0.4
+  firebase_messaging: ^9.0.0
   flutter:
     sdk: flutter
 
