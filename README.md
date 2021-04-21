@@ -1,9 +1,6 @@
-issue <!-- todo: link -->
+issue https://github.com/flutter/flutter/issues/80704
 
-<!-- todo: 
-* change 'flutter_80704' to appropriate branch name
-* and add some breif description gere
--->
+hot reload hangs on forever
 
 to clone use
 
