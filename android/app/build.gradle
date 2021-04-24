@@ -37,7 +37,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.audio_service_654"
+        applicationId "com.example.just_audio_385"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()

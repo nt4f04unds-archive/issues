@@ -1,4 +1,4 @@
-package com.example.audio_service_654
+package com.example.just_audio_385
 
 import io.flutter.embedding.android.FlutterActivity
 

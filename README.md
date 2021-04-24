@@ -1,9 +1,9 @@
-issue https://github.com/ryanheise/audio_service/issues/654
+issue https://github.com/ryanheise/just_audio/issues/385
 
-broken file breaks player playback
+`ProcessingState.idle` is being set each time player prepares
 
 to clone use
 
 ```
-git clone -b audio_service_654 --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b just_audio_385 --single-branch git@github.com:nt4f04unds-archive/issues.git
 ```

@@ -48,7 +48,7 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
   int index = 0;
 
   Future<void> _prepare() async {
-    _player.setAsset('assets/broken_file.mp3');
+    _player.setUrl('https://s3.amazonaws.com/scifri-episodes/scifri20181123-episode.mp3');
   }
 
   Future<void> _init() async {
@@ -56,6 +56,7 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
     _prepare();
     _player.playbackEventStream.listen(_setState);
     _player.processingStateStream.listen((state) {
+      print('###state $state');
       if (state == ProcessingState.completed) stop();
     });
   }
