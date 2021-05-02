@@ -1,12 +1,9 @@
-issue https://github.com/ryanheise/audio_service/issues/<!-- todo: link -->
+issue https://github.com/ryanheise/audio_service/issues/690
 
-<!-- todo: 
-* change 'audio_service_issue' to appropriate branch name
-* and add a brief description of the issue here
--->
+notification shouldn't reappear when service is stopped
 
 to clone use
 
 ```
-git clone -b audio_service_issue --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b audio_service_690 --single-branch git@github.com:nt4f04unds-archive/issues.git
 ```

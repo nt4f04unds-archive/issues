@@ -169,6 +169,12 @@ class MainScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ElevatedButton(
+              child: Text('CLICK ME TO UPDATE mediaItem'),
+              onPressed: () {
+                _audioHandler.mediaItem.add(_audioHandler.mediaItem.value);
+              },
+            ),
             // Queue display/controls.
             StreamBuilder<QueueState>(
               stream: _queueStateStream,
