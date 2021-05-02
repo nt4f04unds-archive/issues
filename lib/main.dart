@@ -5,6 +5,7 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:audio_session/audio_session.dart';
 import 'package:rxdart/rxdart.dart';
 
 late AudioPlayerHandler _audioHandler;
@@ -48,11 +49,11 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
   int index = 0;
 
   Future<void> _prepare() async {
-    // TODO: something
-    // _player.setAsset('');
+    _player.setUrl('https://s3.amazonaws.com/scifri-episodes/scifri20181123-episode.mp3');
   }
 
   Future<void> _init() async {
+    mediaItem.add(items[0]);
     queue.add(items);
     _prepare();
     _player.playbackEventStream.listen(_setState);
@@ -110,6 +111,12 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
   @override
   Future<void> stop() async {
     await _player.stop();
+    final audioSession = await AudioSession.instance;
+    try {
+      await audioSession.setActive(false);
+    } catch (e) {
+      print("While deactivating audio session: $e");
+    }
     await super.stop();
   }
 

@@ -7,11 +7,11 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  just_audio: 0.7.3
+  just_audio: 0.7.4
   audio_service:
     git:
       url: https://github.com/ryanheise/audio_service.git
-      ref: 1591871aa7fe440f9c6cf1fd3bb84c6af0880aef # one-isolate
+      ref: d83855dd6eee73a5e86ba6e2794bc8045cda2235 # one-isolate
       path: audio_service
   flutter:
     sdk: flutter

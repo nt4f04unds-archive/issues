@@ -19,8 +19,8 @@ packages:
     dependency: "direct main"
     description:
       path: audio_service
-      ref: "1591871aa7fe440f9c6cf1fd3bb84c6af0880aef"
-      resolved-ref: "1591871aa7fe440f9c6cf1fd3bb84c6af0880aef"
+      ref: d83855dd6eee73a5e86ba6e2794bc8045cda2235
+      resolved-ref: d83855dd6eee73a5e86ba6e2794bc8045cda2235
       url: "https://github.com/ryanheise/audio_service.git"
     source: git
     version: "0.16.2"
@@ -175,7 +175,7 @@ packages:
       name: just_audio
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.7.3"
+    version: "0.7.4"
   just_audio_platform_interface:
     dependency: transitive
     description:
