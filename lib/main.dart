@@ -1,17 +1,12 @@
+// @dart = 2.7
+
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(App());
-}
+void main() => runApp(MyApp());
 
-class App extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'App',
-      home: Scaffold(
-        body: Container(),
-      ),
-    );
+    return Container();
   }
 }

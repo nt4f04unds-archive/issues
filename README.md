@@ -1,12 +1,9 @@
-issue <!-- todo: link -->
+issue https://github.com/Dart-Code/Dart-Code/issues/3356
 
-<!-- todo: 
-* change 'flutter_issue' to appropriate branch name
-* and add some breif description gere
--->
+test is not running due to null safety
 
 to clone use
 
 ```
-git clone -b flutter_issue --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b dartcode_3356 --single-branch git@github.com:nt4f04unds-archive/issues.git
 ```
