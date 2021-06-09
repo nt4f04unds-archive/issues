@@ -8,5 +8,5 @@ issue https://github.com/ryanheise/audio_service/issues/<!-- todo: link -->
 to clone use
 
 ```
-git clone -b audio_service --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b audio_service --single-branch https://github.com/nt4f04unds-archive/issues.git
 ```
