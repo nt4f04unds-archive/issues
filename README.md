@@ -8,5 +8,5 @@ issue <!-- todo: link -->
 to clone use
 
 ```
-git clone -b flutter_issue --single-branch git@github.com:nt4f04unds-archive/issues.git
+git clone -b flutter_issue --single-branch https://github.com/nt4f04unds-archive/issues.git
 ```
