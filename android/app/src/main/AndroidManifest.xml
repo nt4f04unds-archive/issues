@@ -5,7 +5,8 @@
 
    <application
         android:label="audio_service_671"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.example.audio_service_671.Application">
         <activity
             android:name="com.ryanheise.audioservice.AudioServiceActivity"
             android:launchMode="singleTop"
