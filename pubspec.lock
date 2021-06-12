@@ -18,9 +18,11 @@ packages:
   audio_service:
     dependency: "direct main"
     description:
-      path: "C:/dev/projects/native/audio_service/audio_service"
-      relative: false
-    source: path
+      path: audio_service
+      ref: "59b74f1734fe57b647cbb90f7bc0caa269186b40"
+      resolved-ref: "59b74f1734fe57b647cbb90f7bc0caa269186b40"
+      url: "https://github.com/nt4f04und/audio_service.git"
+    source: git
     version: "0.16.2"
   audio_service_platform_interface:
     dependency: transitive
