@@ -1,12 +1,9 @@
-issue https://github.com/ryanheise/audio_service/issues/<!-- todo: link -->
+issue https://github.com/ryanheise/audio_service/issues/667
 
-<!-- todo: 
-* change 'audio_service_issue' to appropriate branch name
-* and add a brief description of the issue here
--->
+queue and media item change performance
 
 to clone use
 
 ```
-git clone -b audio_service --single-branch https://github.com/nt4f04unds-archive/issues.git
+git clone -b audio_service_667 --single-branch https://github.com/nt4f04unds-archive/issues.git
 ```

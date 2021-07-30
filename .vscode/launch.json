@@ -8,7 +8,10 @@
          "name": "dev",
          "type": "dart",
          "request": "launch",
-         "program": "lib/main.dart"
+         "program": "lib/main.dart",
+         "args": [
+            "--no-sound-null-safety"
+         ]
       },
       {
          "name": "dev (web html renderer)",
@@ -33,7 +36,10 @@
          "type": "dart",
          "request": "launch",
          "program": "lib/main.dart",
-         "flutterMode": "release"
+         "flutterMode": "release",
+         "args": [
+            "--no-sound-null-safety"
+         ]
       },
       {
          "name": "release (web html renderer)",
@@ -50,7 +56,10 @@
          "type": "dart",
          "request": "launch",
          "program": "lib/main.dart",
-         "flutterMode": "profile"
+         "flutterMode": "profile",
+         "args": [
+            "--no-sound-null-safety"
+         ]
       },
       {
          "name": "profile (web html renderer)",

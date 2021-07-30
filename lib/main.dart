@@ -11,12 +11,13 @@ import 'package:rxdart/rxdart.dart';
 late AudioPlayerHandler _audioHandler;
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   _audioHandler = await AudioService.init(
     builder: () => AudioPlayerHandler(),
     config: AudioServiceConfig(
       androidNotificationChannelName: 'Audio Service Demo',
       androidNotificationOngoing: true,
-      androidEnableQueue: true,
+      preloadArtwork: true,
     ),
   );
   runApp(App());
@@ -29,33 +30,20 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
 
   final _player = AudioPlayer();
   final items = [
-    MediaItem(
-      id: '1',
-      album: '',
-      title: '1',
-    ),
-    MediaItem(
-      id: '2',
-      album: '',
-      title: '2',
-    ),
-    MediaItem(
-      id: '3',
-      album: '',
-      title: '3',
-    ),
+    for (int i = 0; i < 500; i++)
+      MediaItem(
+        id: '$i',
+        album: '$i',
+        title: '$i',
+        artUri: Uri.parse("https://picsum.photos/900/900?random=$i"),
+      ),
   ];
 
   int index = 0;
 
-  Future<void> _prepare() async {
-    _player.setUrl('https://s3.amazonaws.com/scifri-episodes/scifri20181123-episode.mp3');
-  }
-
   Future<void> _init() async {
-    mediaItem.add(items[0]);
     queue.add(items);
-    _prepare();
+    skipToQueueItem(0);
     _player.playbackEventStream.listen(_setState);
     _player.processingStateStream.listen((state) {
       if (state == ProcessingState.completed) stop();
@@ -76,16 +64,17 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
     switch (parentMediaId) {
       case AudioService.recentRootId:
       default:
-        return Stream.value(items).map((_) => {}) as ValueStream<Map<String, dynamic>>;
+        return Stream.value(items).map((_) => <String, dynamic>{}).shareValue();
     }
   }
 
   @override
   Future<void> skipToQueueItem(int index) async {
     if (index >= 0 && index < queue.value!.length) {
-      _prepare();
+      _player.setUrl('https://s3.amazonaws.com/scifri-episodes/scifri20181123-episode.mp3');
       this.index = index;
       mediaItem.add(queue.value![index]);
+      queue.add(items);
     }
   }
 
@@ -169,6 +158,7 @@ class MainScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            RoamingRedBox(),
             // Queue display/controls.
             StreamBuilder<QueueState>(
               stream: _queueStateStream,
@@ -216,6 +206,7 @@ class MainScreen extends StatelessWidget {
                   children: [
                     if (playing) pauseButton() else playButton(),
                     stopButton(),
+                    clearCacheButton(),
                   ],
                 );
               },
@@ -251,14 +242,18 @@ class MainScreen extends StatelessWidget {
                 return Text("custom event: ${snapshot.data}");
               },
             ),
-            // Display the notification click status.
-            StreamBuilder<bool>(
-              stream: AudioService.notificationClickEvent,
-              builder: (context, snapshot) {
-                return Text(
-                  'Notification Click Status: ${snapshot.data}',
-                );
-              },
+            Expanded(
+              child: ListView.builder(
+                itemCount: _audioHandler.items.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(_audioHandler.items[index].title),
+                    onTap: () {
+                      _audioHandler.skipToQueueItem(index);
+                    },
+                  );
+                },
+              ),
             ),
           ],
         ),
@@ -271,7 +266,7 @@ class MainScreen extends StatelessWidget {
   Stream<MediaState> get _mediaStateStream =>
       Rx.combineLatest2<MediaItem?, Duration, MediaState>(
           _audioHandler.mediaItem,
-          AudioService.getPositionStream(),
+          AudioService.positionStream,
           (mediaItem, position) => MediaState(mediaItem, position));
 
   /// A stream reporting the combined state of the current queue and the current
@@ -304,6 +299,12 @@ class MainScreen extends StatelessWidget {
         icon: Icon(Icons.stop),
         iconSize: 64.0,
         onPressed: _audioHandler.stop,
+      );
+
+  IconButton clearCacheButton() => IconButton(
+        icon: Icon(Icons.delete_outline_rounded),
+        iconSize: 64.0,
+        onPressed: AudioService.cacheManager.emptyCache,
       );
 }
 
@@ -400,4 +401,41 @@ class _SeekBarState extends State<SeekBar> {
   }
 
   Duration get _remaining => widget.duration - widget.position;
+}
+
+class RoamingRedBox extends StatefulWidget {
+  RoamingRedBox({Key? key}) : super(key: key);
+
+  @override
+  _RoamingRedBoxState createState() => _RoamingRedBoxState();
+}
+
+class _RoamingRedBoxState extends State<RoamingRedBox> with SingleTickerProviderStateMixin {
+  late final AnimationController controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 700))
+    ..addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        controller.reverse();
+      } else if (status == AnimationStatus.dismissed) {
+        controller.forward();
+      }
+    })
+    ..forward(); 
+  @override
+  void dispose() { 
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    return AnimatedBuilder(
+      animation: controller, builder: (context, child) => Transform.translate(
+      offset: Offset(
+        Tween(begin: -screenWidth / 2 + 50, end: screenWidth / 2 - 50).evaluate(controller),
+        0,
+      ),
+      child: Container(color: Colors.red, width: 50, height: 50),
+    ));
+  }
 }

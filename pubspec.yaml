@@ -1,4 +1,4 @@
-name: audio_service_issue
+name: audio_service_667
 description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
@@ -9,10 +9,15 @@ environment:
 dependencies:
   just_audio: 0.7.4
   audio_service:
-    git:
-      url: https://github.com/ryanheise/audio_service.git
-      ref: d83855dd6eee73a5e86ba6e2794bc8045cda2235 # one-isolate
+    git: # patch
+      url: https://github.com/nt4f04und/audio_service.git
+      ref: multithread # 2a594beca4e2a95ee5d1d16dde7c17d9ef636c9e
       path: audio_service
+
+    # git: # upstream
+    #   url: https://github.com/ryanheise/audio_service.git
+    #   ref: one-isolate # a8a567719bd8f9b579952ce7fb984d7f495b069a
+    #   path: audio_service
   flutter:
     sdk: flutter
 
