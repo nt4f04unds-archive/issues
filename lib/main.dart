@@ -7,16 +7,30 @@ import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:audio_session/audio_session.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:flutter_audio_query/flutter_audio_query.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 late AudioPlayerHandler _audioHandler;
+late List<SongInfo> songs;
+
+extension on SongInfo {
+  MediaItem toMediaItem() => MediaItem(
+    id: id,
+    album: album,
+    title: title,
+    artUri: Uri.parse(uri),
+  );
+}
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final FlutterAudioQuery audioQuery = FlutterAudioQuery();
+  songs = await audioQuery.getSongs();
   _audioHandler = await AudioService.init(
     builder: () => AudioPlayerHandler(),
     config: AudioServiceConfig(
       androidNotificationChannelName: 'Audio Service Demo',
       androidNotificationOngoing: true,
-      androidEnableQueue: true,
     ),
   );
   runApp(App());
@@ -28,34 +42,18 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
   }
 
   final _player = AudioPlayer();
-  final items = [
-    MediaItem(
-      id: '1',
-      album: '',
-      title: '1',
-    ),
-    MediaItem(
-      id: '2',
-      album: '',
-      title: '2',
-    ),
-    MediaItem(
-      id: '3',
-      album: '',
-      title: '3',
-    ),
-  ];
+  final items = songs.map((el) => el.toMediaItem()).toList();
 
   int index = 0;
 
-  Future<void> _prepare() async {
-    _player.setUrl('https://s3.amazonaws.com/scifri-episodes/scifri20181123-episode.mp3');
+  Future<void> setSong(SongInfo song) async {
+    mediaItem.add(items[songs.indexOf(song)]);
+    queue.add(items);
+    _player.setUrl(song.uri);
   }
 
   Future<void> _init() async {
-    mediaItem.add(items[0]);
-    queue.add(items);
-    _prepare();
+    setSong(songs.first);
     _player.playbackEventStream.listen(_setState);
     _player.processingStateStream.listen((state) {
       if (state == ProcessingState.completed) stop();
@@ -76,14 +74,14 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
     switch (parentMediaId) {
       case AudioService.recentRootId:
       default:
-        return Stream.value(items).map((_) => {}) as ValueStream<Map<String, dynamic>>;
+        return Stream.value(items).map((_) => <String, dynamic>{}).shareValue();
     }
   }
 
   @override
   Future<void> skipToQueueItem(int index) async {
     if (index >= 0 && index < queue.value!.length) {
-      _prepare();
+      setSong(songs[index]);
       this.index = index;
       mediaItem.add(queue.value![index]);
     }
@@ -216,6 +214,7 @@ class MainScreen extends StatelessWidget {
                   children: [
                     if (playing) pauseButton() else playButton(),
                     stopButton(),
+                    clearCacheButton(),
                   ],
                 );
               },
@@ -253,12 +252,26 @@ class MainScreen extends StatelessWidget {
             ),
             // Display the notification click status.
             StreamBuilder<bool>(
-              stream: AudioService.notificationClickEvent,
+              stream: AudioService.notificationClicked,
               builder: (context, snapshot) {
                 return Text(
                   'Notification Click Status: ${snapshot.data}',
                 );
               },
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: songs.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(songs[index].title),
+                    onTap: () {
+                      _audioHandler.setSong(songs[index]);
+                      _audioHandler.play();
+                    },
+                  );
+                },
+              ),
             ),
           ],
         ),
@@ -271,7 +284,7 @@ class MainScreen extends StatelessWidget {
   Stream<MediaState> get _mediaStateStream =>
       Rx.combineLatest2<MediaItem?, Duration, MediaState>(
           _audioHandler.mediaItem,
-          AudioService.getPositionStream(),
+          AudioService.positionStream,
           (mediaItem, position) => MediaState(mediaItem, position));
 
   /// A stream reporting the combined state of the current queue and the current
@@ -304,6 +317,12 @@ class MainScreen extends StatelessWidget {
         icon: Icon(Icons.stop),
         iconSize: 64.0,
         onPressed: _audioHandler.stop,
+      );
+
+  IconButton clearCacheButton() => IconButton(
+        icon: Icon(Icons.delete_outline_rounded),
+        iconSize: 64.0,
+        onPressed: AudioService.cacheManager.emptyCache,
       );
 }
 
