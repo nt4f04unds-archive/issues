@@ -9,16 +9,13 @@ environment:
 dependencies:
   quick_actions: ^0.6.0
   just_audio: ^0.7.5
-  # audio_service:
-  #   git:
-  #     url: https://github.com/ryanheise/audio_service.git
-  #     ref: 56477c2ba066f6dfb89dfa970e47aa2651e0f3c1 # crashy version
-  #     path: audio_service
   audio_service:
     git:
-      url: https://github.com/nt4f04und/audio_service.git
-      ref: 59b74f1734fe57b647cbb90f7bc0caa269186b40 # fixed version
+      url: https://github.com/ryanheise/audio_service.git
+      ref: 6ab36203b8a8c6eff3118f9b94ca96715dece654
       path: audio_service
+  # audio_service:
+  #   path: C:/dev/projects/native/audio_service/audio_service
   flutter:
     sdk: flutter
 

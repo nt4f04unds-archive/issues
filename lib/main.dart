@@ -2,14 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-// import 'package:quick_actions/quick_actions.dart';
+import 'package:quick_actions/quick_actions.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:audio_session/audio_session.dart';
 
 late AudioPlayerHandler _audioHandler;
-// final QuickActions _quickActions = QuickActions();
+final QuickActions _quickActions = QuickActions();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,8 +17,7 @@ void main() async {
     builder: () => AudioPlayerHandler(),
     config: AudioServiceConfig(
       androidNotificationChannelName: 'Audio Service Demo',
-      androidNotificationOngoing: true,
-      androidEnableQueue: true,
+      androidNotificationOngoing: false,
     ),
   );
   runApp(MaterialApp(
@@ -40,17 +39,17 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    // _quickActions.initialize((type) {
-    //   showDialog(
-    //     context: context,
-    //     builder: (context) => AlertDialog(
-    //       title: Text('Test'),
-    //     ),
-    //   );
-    // });
-    // _quickActions.setShortcutItems([
-    //   ShortcutItem(type: 'test', localizedTitle: 'Test'),
-    // ]);
+    _quickActions.initialize((type) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Test'),
+        ),
+      );
+    });
+    _quickActions.setShortcutItems([
+      ShortcutItem(type: 'test', localizedTitle: 'Test'),
+    ]);
   }
 
   @override
@@ -296,7 +295,7 @@ class MainScreen extends StatelessWidget {
             ),
             // Display the notification click status.
             StreamBuilder<bool>(
-              stream: AudioService.notificationClickEvent,
+              stream: AudioService.notificationClicked,
               builder: (context, snapshot) {
                 return Text(
                   'Notification Click Status: ${snapshot.data}',
