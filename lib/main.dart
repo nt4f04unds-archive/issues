@@ -81,10 +81,10 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
 
   @override
   Future<void> skipToQueueItem(int index) async {
-    if (index >= 0 && index < queue.value.length) {
+    if (index >= 0 && index < queue.value!.length) {
       _prepare();
       this.index = index;
-      mediaItem.add(queue.value[index]);
+      mediaItem.add(queue.value![index]);
     }
   }
 
@@ -121,7 +121,7 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
 
   void _setState(PlaybackEvent event) {
     final playing = _player.playing;
-    playbackState.add(playbackState.value.copyWith(
+    playbackState.add(playbackState.value!.copyWith(
       controls: [
         MediaControl.skipToPrevious,
         if (playing) MediaControl.pause else MediaControl.play,
