@@ -48,7 +48,7 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
   int index = 0;
 
   Future<void> _prepare() async {
-    _player.setUrl('https://s3.amazonaws.com/scifri-episodes/scifri20181123-episode.mp3');
+    _player.setUrl('https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3');
   }
 
   Future<void> _init() async {
@@ -81,10 +81,10 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
 
   @override
   Future<void> skipToQueueItem(int index) async {
-    if (index >= 0 && index < queue.value!.length) {
+    if (index >= 0 && index < queue.value.length) {
       _prepare();
       this.index = index;
-      mediaItem.add(queue.value![index]);
+      mediaItem.add(queue.value[index]);
     }
   }
 
@@ -121,7 +121,7 @@ class AudioPlayerHandler extends BaseAudioHandler with QueueHandler, SeekHandler
 
   void _setState(PlaybackEvent event) {
     final playing = _player.playing;
-    playbackState.add(playbackState.value!.copyWith(
+    playbackState.add(playbackState.value.copyWith(
       controls: [
         MediaControl.skipToPrevious,
         if (playing) MediaControl.pause else MediaControl.play,
