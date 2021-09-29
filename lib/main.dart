@@ -16,7 +16,6 @@ Future<void> main() async {
     config: AudioServiceConfig(
       androidNotificationChannelName: 'Audio Service Demo',
       androidNotificationOngoing: true,
-      androidEnableQueue: true,
     ),
   );
   runApp(App());
@@ -253,7 +252,7 @@ class MainScreen extends StatelessWidget {
             ),
             // Display the notification click status.
             StreamBuilder<bool>(
-              stream: AudioService.notificationClickEvent,
+              stream: AudioService.notificationClicked,
               builder: (context, snapshot) {
                 return Text(
                   'Notification Click Status: ${snapshot.data}',
@@ -271,7 +270,7 @@ class MainScreen extends StatelessWidget {
   Stream<MediaState> get _mediaStateStream =>
       Rx.combineLatest2<MediaItem?, Duration, MediaState>(
           _audioHandler.mediaItem,
-          AudioService.getPositionStream(),
+          AudioService.position,
           (mediaItem, position) => MediaState(mediaItem, position));
 
   /// A stream reporting the combined state of the current queue and the current

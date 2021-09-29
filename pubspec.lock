@@ -18,37 +18,31 @@ packages:
   audio_service:
     dependency: "direct main"
     description:
-      path: audio_service
-      ref: d83855dd6eee73a5e86ba6e2794bc8045cda2235
-      resolved-ref: d83855dd6eee73a5e86ba6e2794bc8045cda2235
-      url: "https://github.com/ryanheise/audio_service.git"
-    source: git
-    version: "0.16.2"
+      name: audio_service
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.18.0"
   audio_service_platform_interface:
     dependency: transitive
     description:
-      path: audio_service_platform_interface
-      ref: one-isolate
-      resolved-ref: "5e740fea75767cf82e07481d33b30111016fdd44"
-      url: "https://github.com/ryanheise/audio_service.git"
-    source: git
-    version: "1.0.0"
+      name: audio_service_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   audio_service_web:
     dependency: transitive
     description:
-      path: audio_service_web
-      ref: one-isolate
-      resolved-ref: "5e740fea75767cf82e07481d33b30111016fdd44"
-      url: "https://github.com/ryanheise/audio_service.git"
-    source: git
-    version: "0.16.2"
+      name: audio_service_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1"
   audio_session:
     dependency: transitive
     description:
       name: audio_session
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.2"
+    version: "0.1.6+1"
   boolean_selector:
     dependency: transitive
     description:
@@ -62,7 +56,7 @@ packages:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   charcode:
     dependency: transitive
     description:
@@ -376,7 +370,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   win32:
     dependency: transitive
     description:
@@ -399,5 +393,5 @@ packages:
     source: hosted
     version: "5.1.2"
 sdks:
-  dart: ">=2.13.0 <3.0.0"
-  flutter: ">=1.24.0-10"
+  dart: ">=2.14.0 <3.0.0"
+  flutter: ">=2.0.0"
