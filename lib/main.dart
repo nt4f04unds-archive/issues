@@ -10,7 +10,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'App',
       home: Scaffold(
-        body: Container(),
+        body: Container(color: Colors.red),
       ),
     );
   }
