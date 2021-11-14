@@ -1,12 +1,9 @@
-issue <!-- todo: link -->
+issue https://github.com/flutter/flutter/issues/93612
 
-<!-- todo: 
-* change 'flutter_issue' to appropriate branch name
-* and add some breif description gere
--->
+invokeMethod within kotlin coroutines never completes
 
 to clone use
 
 ```
-git clone -b flutter_issue --single-branch https://github.com/nt4f04unds-archive/issues.git
+git clone -b flutter_93612 --single-branch https://github.com/nt4f04unds-archive/issues.git
 ```
