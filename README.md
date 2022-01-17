@@ -2,7 +2,7 @@ issue <!-- todo: link -->
 
 <!-- todo: 
 * change 'flutter_issue' to appropriate branch name
-* and add some breif description gere
+* and add some breif description here
 -->
 
 to clone use
