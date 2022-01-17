@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_issue">
+    package="com.example.flutter_96739">
    <application
-        android:label="flutter_issue"
+        android:label="flutter_96739"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -37,5 +37,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <provider
+          android:name=".MyAndroidContentProvider"
+          android:authorities="com.example.myapp.MyAndroidContentProvider"
+          android:exported="true" />
     </application>
 </manifest>

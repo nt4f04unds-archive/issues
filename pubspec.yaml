@@ -1,4 +1,4 @@
-name: flutter_issue
+name: flutter_96739
 description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
@@ -10,9 +10,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+  android_content_provider: ^0.0.1
   cupertino_icons: ^1.0.1
 
 dev_dependencies:
+  integration_test:
+    sdk: flutter
   flutter_test:
     sdk: flutter
 
