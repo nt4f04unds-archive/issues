@@ -11,7 +11,7 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  VideoPlayerController controller;
+  late VideoPlayerController controller;
   bool ready = false;
   double height = 100.0;
 
@@ -54,7 +54,7 @@ class _AppState extends State<App> {
                 : SizedBox.shrink(),
             Align(
               alignment: Alignment.bottomCenter,
-              child: RaisedButton(
+              child: ElevatedButton(
                 child: Text('switch height'),
                 onPressed: () {
                   if (height == 100.0) {
