@@ -11,7 +11,7 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  VideoPlayerController controller;
+  late VideoPlayerController controller;
   bool ready = false;
   double height = 100.0;
 
@@ -38,20 +38,40 @@ class _AppState extends State<App> {
       });
   }
 
+  void _playPause() {
+    if (controller.value.isPlaying) {
+      controller.pause();
+    } else {
+      controller.play();
+    }
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'App',
       home: Scaffold(
         backgroundColor: Colors.red,
-        body: ready
-            ? Center(
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: VideoPlayer(controller),
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ready
+                  ? AspectRatio(
+                      aspectRatio: 1,
+                      child: VideoPlayer(controller),
+                    )
+                  : SizedBox.shrink(),
+              IconButton(
+                icon: Icon(
+                  controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
                 ),
-              )
-            : SizedBox.shrink(),
+                onPressed: _playPause,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
